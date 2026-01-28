@@ -108,21 +108,20 @@ git checkout student/nombre_apellido_cedula
 # Ejemplo:
 # git checkout student/juan_perez_0123456789
 
-# 4. Ejecutar validación automática
-chmod +x validation/validate.sh
-./validation/validate.sh
+# 4. Ejecutar calificación automática (100 puntos)
+./calificar.sh
 
-# 5. Ver resultado
-# El script mostrará si pasa o no todas las pruebas
+# Esto validará:
+# - Docker Compose (20pts)
+# - Contenedores corriendo (20pts)
+# - Bases de datos (15pts)
+# - SymmetricDS (15pts)
+# - Replicación bidireccional (30pts)
 
-# 6. Opcional: Ejecutar calificación detallada
-chmod +x grade.sh
-./grade.sh
+# 5. Ver resultado y reporte generado
+# El script genera calificacion_[timestamp].txt
 
-# 7. Limpiar contenedores
-docker-compose down -v
-
-# 8. Volver a main para el siguiente estudiante
+# 6. Volver a main para el siguiente estudiante
 git checkout main
 ```
 
